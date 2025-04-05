@@ -1,0 +1,19 @@
+{
+  "extends": "biome-config",
+  "rules": {
+    "formatting": {
+      "tabWidth": 2,
+      "useTabs": false,
+      "semi": true,
+      "singleQuote": true,
+      "trailingComma": "es5"
+    },
+    "linting": {
+      "noUnusedVars": "warn",
+      "noConsole": "off"
+    }
+  },
+  "plugins": [
+    "biome-plugin-astro"
+  ]
+}

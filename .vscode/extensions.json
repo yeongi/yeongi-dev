@@ -1,4 +1,6 @@
 {
   "recommendations": ["astro-build.astro-vscode"],
-  "unwantedRecommendations": []
+  "unwantedRecommendations": [],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome"
 }
