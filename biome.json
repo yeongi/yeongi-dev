@@ -1,19 +1,30 @@
 {
-  "extends": "biome-config",
-  "rules": {
-    "formatting": {
-      "tabWidth": 2,
-      "useTabs": false,
-      "semi": true,
-      "singleQuote": true,
-      "trailingComma": "es5"
-    },
-    "linting": {
-      "noUnusedVars": "warn",
-      "noConsole": "off"
-    }
-  },
-  "plugins": [
-    "biome-plugin-astro"
-  ]
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"formatter": {
+		"enabled": true,
+		"indentWidth": 2,
+		"lineEnding": "lf"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+	"overrides": [
+		{
+			"include": ["*.astro"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useConst": "off",
+						"useImportType": "off"
+					}
+				}
+			}
+		}
+	]
 }
