@@ -1,25 +1,12 @@
 ---
+import BasicLayout from "../layouts/BasicLayout.astro";
 import "../styles/global.css";
 ---
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />	
-        <title>Astro</title>
-    </head>
-    <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <h1>Blog</h1>
-        
-        <h2>블로그 리스트를 만들어야 한다.</h2>
-
-        <ul>
-            <li><a href="/docs/docs-1/">docs 1</a></li>
-            <li><a href="/docs/docs-2/">docs 2</a></li>
-            <li><a href="/docss/docs-3/">docs 3</a></li>
-        </ul>
-    </body>
-</html>
+<BasicLayout pageTitle="Blog">
+    <h2>블로그 리스트를 만들어야 한다.</h2>
+    <ul>
+        <li><a href="/docs/docs-1/">docs 1</a></li>
+        <li><a href="/docs/docs-2/">docs 2</a></li>
+        <li><a href="/docs/docs-3/">docs 3</a></li>
+    </ul>
+</BasicLayout>
