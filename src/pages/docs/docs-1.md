@@ -1,3 +1,11 @@
+---
+title: 'My First Blog Post'
+pubDate: 2022-07-01
+description: 'This is the first post of my new Astro blog.'
+author: 'Astro Learner'
+tags: ["astro", "blogging", "learning in public"]
+---
+
 ### 아키텍처
 
 마크다운 파일을 기반으로 정적페이지가 나와야 한다. 어떻게 시스템을 구성 해야 할까?
