@@ -3,13 +3,13 @@ import BasicLayout from "../layouts/BasicLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import "../styles/global.css";
 
-const allPosts = Object.values(
-	import.meta.glob("./posts/*.md", { eager: true }),
-);
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
 ---
 <BasicLayout pageTitle="Blog">
     <h2>저의 블로그 리스트 입니다.</h2>
     <ul>
-        {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+        {allPosts.map((post: any) =><BlogPost url={`/posts/${post.id}/`} title={post.data.title} />)}
     </ul>
 </BasicLayout>
