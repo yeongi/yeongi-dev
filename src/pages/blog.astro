@@ -7,8 +7,9 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("blog");
 ---
-<BasicLayout pageTitle="Blog">
-    <h2>저의 블로그 리스트 입니다.</h2>
+<BasicLayout pageTitle="Dev-Blog">
+    <h2>개발 블로그 입니다.</h2>
+    <p>주로 개발 인사이트를 정리하는 용도로 작성하겠습니다.</p>
     <ul>
         {allPosts.map((post: any) =><BlogPost url={`/posts/${post.id}/`} title={post.data.title} />)}
     </ul>

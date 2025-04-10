@@ -1,11 +1,17 @@
 ---
 import "../styles/global.css";
 import BasicLayout from "../layouts/BasicLayout.astro";
-import Greeting from "../components/Greeting";
 
-const pageTitle = "About Me";
+const pageTitle = "제목";
 ---
 <BasicLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
-	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+	<h2>이영's 개발 로그</h2>
+	<img
+		alt="프로필 사진"
+		src="https://avatars.githubusercontent.com/u/40158148?s=400&u=6aa5386404344e45d7cff373a7586a45c3b87d5e&v=4"
+		width="200"
+		height="200"
+	/>	
+	<p>사과나무를 심는다는 마인드로 운영하겠습니다.</p>
+	<p>어쩌다 보니 개발자로 살고있는것 같기도 합니다.</p>
 </BasicLayout>

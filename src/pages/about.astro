@@ -3,17 +3,13 @@ import BasicLayout from "../layouts/BasicLayout.astro";
 import "../styles/global.css";
 
 const identity = {
-	firstName: "Sarah",
-	country: "Canada",
-	occupation: "Technical Writer",
-	hobbies: ["photography", "birdwatching", "baseball"],
+	name: "장의영",
+	country: "Seoul in Korea",
+	occupation: "Software Engineer",
+	hobbies: ["사진찍기", "글쓰기", "기타치기", "요리하기"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
 
 const skillColor = "navy";
 const fontWeight = "bold";
@@ -22,19 +18,16 @@ const textCase = "uppercase";
 
 <BasicLayout pageTitle="About Me!">
   <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+    <li>제 이름은 {identity.name} 입니다.</li>
+    <li>제가 거주하는 {identity.country} 제가 일하는 {identity.occupation}</li>
     {identity.hobbies.length >= 2 &&
-      <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+      <li>취미는 여러개가 있습니다. {identity.hobbies[0]} and {identity.hobbies[1]}</li>
     }
   </ul>
   <p>My skills are:</p>
   <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
-  {happy && <p>I am happy to be learning Astro!</p>}
-  {finished && <p>I finished this tutorial!</p>}
-  {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
   <style define:vars={{skillColor, fontWeight, textCase}}>
     h1 {
